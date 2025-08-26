@@ -6,8 +6,8 @@ from telebot.types import ReplyKeyboardMarkup, KeyboardButton, InlineKeyboardMar
 from datetime import datetime
 
 # Load configuration from environment variables (more secure)
-API_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN", "7962161598:AAH4prrGWlSWFsGHxpmlJ4gOWeQ6mRhHmaw")
-ADMIN_ID = int(os.getenv("TELEGRAM_ADMIN_ID", 6532973155))
+API_TOKEN = "7962161598:AAH4prrGWlSWFsGHxpmlJ4gOWeQ6mRhHmaw"
+ADMIN_ID = 6532973155
 
 bot = telebot.TeleBot(API_TOKEN, parse_mode='HTML')
 
@@ -659,4 +659,4 @@ def handle_other_messages(message):
 
 if __name__ == "__main__":
     print("Bot ishga tushyapti...")
-    bot.polling(none_stop=True)
+    bot.polling()
